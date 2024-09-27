@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #4891ff;
+  --light-color: #f4f4f4;
+  --dark-color: #111;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar */
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar .nav-menu ul {
+  display: flex;
+}
+
+.navbar .nav-menu ul li a {
+  padding: 10px 20px;
+  display: block;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.nav-menu ul li:last-child a {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.navbar .nav-menu ul li a i {
+  margin-right: 10px;
+}
+
+.navbar .nav-menu ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navbar .nav-menu ul li:last-child a:hover {
+  color: #fff;
+}
+
+/* hero */
+
+.hero {
+  padding-bottom: 50px;
+}
+
+.hero .container {
+  background: url("../images/hero-bg.png") no-repeat;
+  height: 550px;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.hero .hero-content {
+  width: 70%;
+}
+
+.hero .hero-content .hero-para {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.cta-btns {
+  display: flex;
+  gap: 15px;
+}
+
+/* video */
+
+.video {
+  padding-block: 4rem;
+}
+
+.video-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-preview a {
+  margin-top: 32px;
+}
+
+/* testimonials */
+
+.testimonials {
+  padding: 40px 0;
+}
+
+.testimonials .container {
+  margin-bottom: 30px;
+}
+
+.testimonials .testimonials-heading {
+  width: 750px;
+  margin-bottom: 30px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonials-grid .card p:nth-child(2) {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* pricing */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.pricing-card-para {
+  margin-bottom: 20px;
+}
+
+.pricing-amount {
+  margin: 30px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.pricing-card-body p {
+  margin-bottom: 20px;
+}
+
+.pricing-card-body ul li {
+  margin-bottom: 20px;
+}
+
+.pricing-footer {
+  margin-top: 20px;
+}
+
+.cta-features {
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+/* .pricing-grid .pricing-card-head{
+  margin-bottom: 25px;
+} */
+
+/* utility classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-max {
+  display: block;
+}
+
+/* typography */
+
+.text-xxl {
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-block: 30px 20px;
+}
+
+.text-xl {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-block: 25px 20px;
+}
+
+.text-lg {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-block: 25px 15px;
+}
+
+.text-md {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-block: 25px 15px;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-block: 10px 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* background */
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
