@@ -15,6 +15,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -106,14 +107,18 @@ ul {
   margin-top: 32px;
 }
 
+.video-preview a img {
+  width: 100%;
+}
+
 /* testimonials */
 
 .testimonials {
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .testimonials .container {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .testimonials .testimonials-heading {
@@ -161,7 +166,7 @@ ul {
 }
 
 .pricing-footer {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .cta-features {
@@ -172,6 +177,126 @@ ul {
 /* .pricing-grid .pricing-card-head{
   margin-bottom: 25px;
 } */
+
+/* FAQ */
+
+.faq {
+  padding: 40px 0;
+}
+
+.faq .faq-menu {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  background: #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.faq .faq-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.faq .faq-menu li.active {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.faq-groups {
+  padding: 40px 0;
+}
+
+.faq-group {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+.faq-group .faq-header {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.faq-group .faq-heading {
+  width: 95%;
+  font-weight: 600;
+}
+
+.faq-group .faq-header i {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.faq-group .faq-body {
+  width: 95%;
+  display: none;
+}
+
+.faq-group .faq-body.open {
+  display: block;
+}
+
+/* Footer */
+
+.footer {
+  padding-block: 50px 20px;
+}
+
+.footer a {
+  color: #cccc;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer .card {
+  margin-bottom: 30px;
+}
+
+.footer i {
+  margin-right: 10px;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer-grid {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .newsletter input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
 
 /* utility classes */
 .container {
@@ -247,14 +372,14 @@ ul {
 
 .text-md {
   font-size: 1.2rem;
-  line-height: 1.2;
+  line-height: 1.6;
   font-weight: normal;
   margin-block: 25px 15px;
 }
 
 .text-sm {
-  font-size: 0.8rem;
-  line-height: 1.2;
+  font-size: 0.9rem;
+  line-height: 1.4;
   font-weight: normal;
   margin-block: 10px 5px;
 }
@@ -283,4 +408,119 @@ ul {
 .bg-black {
   background: #000;
   color: #fff;
+}
+
+/* hamburger */
+
+.ham-btn i {
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+
+.ham-btn {
+  display: none;
+}
+
+.ham-active {
+  color: #fff;
+}
+
+.mobile-menu {
+  background: var(--dark-color);
+  position: fixed;
+  top: 0;
+  right: -60%;
+  width: 250px;
+  padding: 10px 20px;
+  height: 100%;
+  z-index: 2;
+
+  transition: right 0.3s ease-in-out;
+}
+
+.menu-active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin: 80px 0;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.mobile-menu ul li a {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.mobile-menu ul li a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .ham-btn {
+    display: block;
+  }
+
+  .hero .container {
+    background: url("../images/hero-bg-mobile.png") no-repeat;
+    background-position: bottom;
+    height: 850px;
+  }
+
+  .hero .hero-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-content .hero-para {
+    width: 100%;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-xl {
+    font-size: 2rem;
+  }
+
+  .text-md {
+    font-size: 1rem;
+  }
+
+  .testimonials .testimonials-heading {
+    width: 100%;
+  }
+
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-grid .logo {
+    width: max-content;
+    margin: 0 auto 20px;
+  }
+
+  .footer .footer-grid > div {
+    text-align: center;
+  }
 }
